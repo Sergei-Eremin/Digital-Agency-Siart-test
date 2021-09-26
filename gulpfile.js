@@ -127,7 +127,8 @@ const scriptTask2 = function(){
 imgPack = [
     './src/image/**/*.jpg',
     './src/image/**/*.jpeg',
-    './src/image/**/*.png'
+    './src/image/**/*.png',
+    './src/image/**/*.svg'
 ]
 
 const imgCopyTask = function(done){

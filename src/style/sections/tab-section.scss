@@ -30,6 +30,7 @@ section.tab-section{
 
         .tab-body{
             display: none;
+            padding-bottom: 60px;
             &.active{
                 display: block;
             }
@@ -47,12 +48,94 @@ section.tab-section{
             &__content{
                 background-color: #EFEFEF;
                 padding: 40px;
-
-                h3{
-                    font-size: 28;
+                &>h3{
+                    font-size: 28px;
                     font-weight: 800;
+                    margin-bottom: 24px;
                 }
 
+                form{
+                    padding-top: 28px;
+
+                    .form-labels{
+                        display: flex;
+                        margin: 0 -8px;
+
+                        .form-label{
+                            width: calc(100%/12*4 - 16px);
+                            margin: 0 8px;
+                            label{
+                                display: block;
+                                position: relative;
+                                .input-signature{
+                                    font-weight: 700;
+                                    position: absolute;
+                                    top: -25px;
+                                    left: 0;
+                                    &::before{
+                                        position: absolute;
+                                        top: -6px;
+                                        right: -15px;
+                                        width: 7px;
+                                        height: 7px;
+                                        content: url('../image/tab-section/necessarily.svg');
+                                    }
+                                }
+                            }
+                            input{
+                                width: 100%;
+                                border: none;
+                                padding: 13px;
+                            }
+                            &:last-child{
+                                .input-signature::before{
+                                    content: none;
+                                }
+                            }
+                        }
+                    }
+
+                    .uploadFile{    
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        margin-top: 24px;
+                        h3{
+                            font-size: 20px;
+                            line-height: 36px;
+                        }
+                        .picture-list{
+                            width: 100%;
+                            min-height: 50px;
+                        }
+                        label{
+                            span{
+                                display: inline-block;
+                                border: 1px solid #747474;
+                                padding: 20px;
+                                font-weight: 700;
+                                font-size: 12px;
+                                cursor: pointer;
+                            }
+                            input{
+                                visibility: hidden;
+                                width: 0;
+                                margin-left: 16px;
+                            }
+                        }
+                        // .download__text{
+                        //     display: inline-block;
+                        // }
+                    }
+                    input[type=submit]{
+                        margin-top: 24px;
+                        background-color: var(--orange);
+                        border: none;
+                        color: #fff;
+                        padding: 16px 54px;
+                        cursor: pointer;
+                    }
+                }
             }
         }
     }

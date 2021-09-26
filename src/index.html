@@ -103,9 +103,38 @@
                             </div>
                             <div class="tab-body__content">
                                 <h3>Загрузить фотографии на сайт прямо сейчас:</h3>
-
-                                <form action="">
-
+                                <form id="form" method="POST" action="#">
+                                    <ul class="form-labels">
+                                        <li class="form-label">
+                                            <label for="">
+                                                <span class="input-signature">Ваше имя</span>
+                                                <input data-validate-field="name" type="text" name="name">
+                                            </label>
+                                        </li>
+                                        <li class="form-label">
+                                            <label for="">
+                                                <span class="input-signature">Телефон</span>
+                                                <input data-validate-field="phone" type="tel" name="phone">
+                                            </label>
+                                        </li>
+                                        <li class="form-label">
+                                            <label for="">
+                                                <span class="input-signature">E-mail</span>
+                                                <input  type="email" name="email">
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <div class="uploadFile">
+                                        <h3>Загрузить фотографии</h3>
+                                        <div class="picture-list"></div>
+                                        <label>
+                                            <span>ВЫБРАТЬ ФОТОГРАФИИ</span>
+                                            <input type="file" name="file" multiple>
+                                        </label>
+                                        <p class="uploadFile__text">Вы можете загрузить 5 изображений в формате JPG, JPEG, PNG. <br> Размер каждой фотографии не должен превышать 2 Мбайт.
+                                        </p>
+                                    </div>
+                                    <input type="submit">
                                 </form>
                             </div>
                         </div>
